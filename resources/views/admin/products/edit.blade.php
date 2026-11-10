@@ -1,0 +1,172 @@
+@extends('admin.layouts.app')
+@section('title','Edit Product')
+@section('content')
+<div class="container mt-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3 class="mb-0 fw-bold">Edit Product</h3>
+        <a href="{{ route('admin.products.index') }}" class="btn btn-outline-primary">
+            <i class="bi bi-arrow-left me-1"></i>Back to List
+        </a>
+    </div>
+
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <strong>Whoops!</strong> There were some problems with your input.
+        <ul class="mb-0">
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <form method="POST" action="{{ route('admin.products.update', $product->id) }}" enctype="multipart/form-data">
+                @csrf
+                @method('PUT')
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Product Name <span class="text-danger">*</span></label>
+                        <input type="text" name="name" class="form-control" value="{{ old('name', $product->name) }}" required>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Product Type <span class="text-danger">*</span></label>
+                        <select name="product_type" class="form-select" required>
+                            <option value="b2b" {{ old('product_type', $product->product_type) == 'b2b' ? 'selected' : '' }}>B2B</option>
+                            <option value="b2c" {{ old('product_type', $product->product_type) == 'b2c' ? 'selected' : '' }}>B2C</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Description</label>
+                    <textarea name="description" class="form-control" rows="3">{{ old('description', $product->description) }}</textarea>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">Front Image</label>
+                        <input type="file" name="front_image" class="form-control">
+                        @if($product->front_image)
+                        <div class="mt-2">
+                            <img src="{{ asset('storage/' . $product->front_image) }}" width="100" class="rounded shadow-sm">
+                        </div>
+                        @endif
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">Back Image</label>
+                        <input type="file" name="back_image" class="form-control">
+                        @if($product->back_image)
+                        <div class="mt-2">
+                            <img src="{{ asset('storage/' . $product->back_image) }}" width="100" class="rounded shadow-sm">
+                        </div>
+                        @endif
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">Side Image</label>
+                        <input type="file" name="side_image" class="form-control">
+                        @if($product->side_image)
+                        <div class="mt-2">
+                            <img src="{{ asset('storage/' . $product->side_image) }}" width="100" class="rounded shadow-sm">
+                        </div>
+                        @endif
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Brewing Info</label>
+                    <textarea name="brewing_info" class="form-control" rows="2">{{ old('brewing_info', $product->brewing_info) }}</textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Categories</label>
+                    <div id="categories">
+                        @foreach($category as $id => $name)
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="category_id[]" value="{{ $id }}"
+                                {{ in_array($id, $selectedCategories) ? 'checked' : '' }}>
+                            <label class="form-check-label">{{ $name }}</label>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+
+                <button type="button" id="add-variant" class="btn btn-primary mb-3"><i class="bi bi-plus-circle me-1"></i>Add Unit</button>
+
+                <h5 class="fw-bold">Product Units / Variants</h5>
+                <div id="variants-wrapper">
+                    @php
+                        $variants = old('variants', $product->variants->toArray());
+                    @endphp
+                    @foreach ($variants as $index => $variant)
+                    <div class="row mb-2 variant-row">
+                        <div class="col-md-3">
+                            <input type="text" name="variants[{{ $index }}][unit]" class="form-control"
+                                placeholder="Unit (e.g., 100g)" value="{{ $variant['unit'] }}">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" step="0.01" name="variants[{{ $index }}][price]" class="form-control"
+                                placeholder="Price" value="{{ $variant['price'] }}">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" step="0.01" name="variants[{{ $index }}][stock]" class="form-control"
+                                placeholder="Stock" value="{{ $variant['stock'] }}">
+                        </div>
+                        <div class="col-md-3">
+                            <button type="button" class="btn btn-danger remove-variant"><i class="bi bi-trash"></i> Remove</button>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+
+                <div class="mt-4 text-end">
+                    <button class="btn btn-success"><i class="bi bi-check-circle me-1"></i>Update Product</button>
+                    <a href="{{ route('admin.products.index') }}" class="btn btn-danger ms-2"><i class="bi bi-x-circle me-1"></i>Cancel</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<script>
+let variantIndex = {{ count($variants) }};
+
+document.addEventListener('DOMContentLoaded', function() {
+    const addVariantBtn = document.getElementById('add-variant');
+    const wrapper = document.getElementById('variants-wrapper');
+
+    addVariantBtn.addEventListener('click', function() {
+        let row = document.createElement('div');
+        row.classList.add('row', 'mb-2', 'variant-row');
+        row.innerHTML = `
+            <div class="col-md-3">
+                <input type="text" name="variants[${variantIndex}][unit]" class="form-control" placeholder="Unit (e.g., 100g)">
+            </div>
+            <div class="col-md-3">
+                <input type="number" step="0.01" name="variants[${variantIndex}][price]" class="form-control" placeholder="Price">
+            </div>
+            <div class="col-md-3">
+                <input type="number" step="0.01" name="variants[${variantIndex}][stock]" class="form-control" placeholder="Stock">
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-danger remove-variant"><i class="bi bi-trash"></i> Remove</button>
+            </div>
+        `;
+        wrapper.appendChild(row);
+        variantIndex++;
+    });
+
+    wrapper.addEventListener('click', function(e) {
+        if(e.target.closest('.remove-variant')){
+            e.target.closest('.variant-row').remove();
+        }
+    });
+});
+</script>
+@endsection

@@ -1,0 +1,132 @@
+[07-Oct-2025 14:40:10 UTC] PHP Fatal error:  Cannot declare class App\Http\Controllers\Admin\EventController, because the name is already in use in /home/markcawm/public_html/whitepeony/app/Http/Controllers/API/EventController.php on line 9
+[07-Oct-2025 14:40:28 UTC] PHP Fatal error:  Cannot declare class App\Http\Controllers\Admin\EventController, because the name is already in use in /home/markcawm/public_html/whitepeony/app/Http/Controllers/API/EventController.php on line 9
+[07-Oct-2025 14:45:47 UTC] PHP Fatal error:  Cannot declare class App\Http\Controllers\Admin\EventController, because the name is already in use in /home/markcawm/public_html/whitepeony/app/Http/Controllers/API/EventController.php on line 9
+[07-Oct-2025 15:01:15 UTC] PHP Fatal error:  Cannot declare class App\Http\Controllers\Admin\EventController, because the name is already in use in /home/markcawm/public_html/whitepeony/app/Http/Controllers/API/EventController.php on line 9
+[07-Oct-2025 15:02:08 UTC] PHP Fatal error:  Cannot declare class App\Http\Controllers\Admin\EventController, because the name is already in use in /home/markcawm/public_html/whitepeony/app/Http/Controllers/API/EventController.php on line 9
+[07-Oct-2025 15:02:25 UTC] PHP Fatal error:  Cannot declare class App\Http\Controllers\Admin\EventController, because the name is already in use in /home/markcawm/public_html/whitepeony/app/Http/Controllers/API/EventController.php on line 9
+[07-Oct-2025 15:04:54 UTC] PHP Fatal error:  Cannot declare class App\Http\Controllers\Admin\EventController, because the name is already in use in /home/markcawm/public_html/whitepeony/app/Http/Controllers/API/EventController.php on line 9
+[07-Oct-2025 15:13:04 UTC] PHP Fatal error:  Cannot declare class App\Http\Controllers\Admin\EventController, because the name is already in use in /home/markcawm/public_html/whitepeony/app/Http/Controllers/API/EventController.php on line 9
+[07-Oct-2025 15:14:01 UTC] PHP Fatal error:  Cannot declare class App\Http\Controllers\Admin\EventController, because the name is already in use in /home/markcawm/public_html/whitepeony/app/Http/Controllers/API/EventController.php on line 9
+[29-Oct-2025 13:02:43 UTC] PHP Fatal error:  Uncaught RuntimeException: A facade root has not been set. in /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php:360
+Stack trace:
+#0 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/RegisterErrorViewPaths.php(17): Illuminate\Support\Facades\Facade::__callStatic()
+#1 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(948): Illuminate\Foundation\Exceptions\RegisterErrorViewPaths->__invoke()
+#2 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(923): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#3 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(848): Illuminate\Foundation\Exceptions\Handler->renderHttpException()
+#4 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(739): Illuminate\Foundation\Exceptions\Handler->prepareResponse()
+#5 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(627): Illuminate\Foundation\Exceptions\Handler->renderExceptionResponse()
+#6 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(574): Illuminate\Foundation\Exceptions\Handler->render()
+#7 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(148): Illuminate\Foundation\Http\Kernel->renderException()
+#8 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1220): Illuminate\Foundation\Http\Kernel->handle()
+#9 /home/markcawm/public_html/whitepeony/public/index.php(20): Illuminate\Foundation\Application->handleRequest()
+#10 /home/markcawm/public_html/whitepeony/index.php(21): require_once('/home/markcawm/...')
+#11 {main}
+  thrown in /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php on line 360
+[29-Oct-2025 13:04:17 UTC] PHP Fatal error:  Uncaught RuntimeException: A facade root has not been set. in /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php:360
+Stack trace:
+#0 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/RegisterErrorViewPaths.php(17): Illuminate\Support\Facades\Facade::__callStatic()
+#1 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(948): Illuminate\Foundation\Exceptions\RegisterErrorViewPaths->__invoke()
+#2 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(923): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#3 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(848): Illuminate\Foundation\Exceptions\Handler->renderHttpException()
+#4 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(739): Illuminate\Foundation\Exceptions\Handler->prepareResponse()
+#5 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(627): Illuminate\Foundation\Exceptions\Handler->renderExceptionResponse()
+#6 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(574): Illuminate\Foundation\Exceptions\Handler->render()
+#7 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(148): Illuminate\Foundation\Http\Kernel->renderException()
+#8 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1220): Illuminate\Foundation\Http\Kernel->handle()
+#9 /home/markcawm/public_html/whitepeony/public/index.php(20): Illuminate\Foundation\Application->handleRequest()
+#10 /home/markcawm/public_html/whitepeony/index.php(21): require_once('/home/markcawm/...')
+#11 {main}
+  thrown in /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php on line 360
+[29-Oct-2025 13:06:33 UTC] PHP Fatal error:  Uncaught RuntimeException: A facade root has not been set. in /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php:360
+Stack trace:
+#0 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/RegisterErrorViewPaths.php(17): Illuminate\Support\Facades\Facade::__callStatic()
+#1 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(948): Illuminate\Foundation\Exceptions\RegisterErrorViewPaths->__invoke()
+#2 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(923): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#3 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(848): Illuminate\Foundation\Exceptions\Handler->renderHttpException()
+#4 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(739): Illuminate\Foundation\Exceptions\Handler->prepareResponse()
+#5 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(627): Illuminate\Foundation\Exceptions\Handler->renderExceptionResponse()
+#6 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(574): Illuminate\Foundation\Exceptions\Handler->render()
+#7 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(148): Illuminate\Foundation\Http\Kernel->renderException()
+#8 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1220): Illuminate\Foundation\Http\Kernel->handle()
+#9 /home/markcawm/public_html/whitepeony/public/index.php(20): Illuminate\Foundation\Application->handleRequest()
+#10 /home/markcawm/public_html/whitepeony/index.php(21): require_once('/home/markcawm/...')
+#11 {main}
+  thrown in /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php on line 360
+[29-Oct-2025 13:07:30 UTC] PHP Fatal error:  Uncaught RuntimeException: A facade root has not been set. in /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php:360
+Stack trace:
+#0 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/RegisterErrorViewPaths.php(17): Illuminate\Support\Facades\Facade::__callStatic()
+#1 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(948): Illuminate\Foundation\Exceptions\RegisterErrorViewPaths->__invoke()
+#2 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(923): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#3 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(848): Illuminate\Foundation\Exceptions\Handler->renderHttpException()
+#4 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(739): Illuminate\Foundation\Exceptions\Handler->prepareResponse()
+#5 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(627): Illuminate\Foundation\Exceptions\Handler->renderExceptionResponse()
+#6 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(574): Illuminate\Foundation\Exceptions\Handler->render()
+#7 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(148): Illuminate\Foundation\Http\Kernel->renderException()
+#8 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1220): Illuminate\Foundation\Http\Kernel->handle()
+#9 /home/markcawm/public_html/whitepeony/public/index.php(20): Illuminate\Foundation\Application->handleRequest()
+#10 /home/markcawm/public_html/whitepeony/index.php(21): require_once('/home/markcawm/...')
+#11 {main}
+  thrown in /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php on line 360
+[29-Oct-2025 13:08:49 UTC] PHP Fatal error:  Uncaught RuntimeException: A facade root has not been set. in /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php:360
+Stack trace:
+#0 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/RegisterErrorViewPaths.php(17): Illuminate\Support\Facades\Facade::__callStatic()
+#1 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(948): Illuminate\Foundation\Exceptions\RegisterErrorViewPaths->__invoke()
+#2 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(923): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#3 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(848): Illuminate\Foundation\Exceptions\Handler->renderHttpException()
+#4 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(739): Illuminate\Foundation\Exceptions\Handler->prepareResponse()
+#5 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(627): Illuminate\Foundation\Exceptions\Handler->renderExceptionResponse()
+#6 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(574): Illuminate\Foundation\Exceptions\Handler->render()
+#7 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(148): Illuminate\Foundation\Http\Kernel->renderException()
+#8 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1220): Illuminate\Foundation\Http\Kernel->handle()
+#9 /home/markcawm/public_html/whitepeony/public/index.php(20): Illuminate\Foundation\Application->handleRequest()
+#10 /home/markcawm/public_html/whitepeony/index.php(21): require_once('/home/markcawm/...')
+#11 {main}
+  thrown in /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php on line 360
+[29-Oct-2025 13:08:57 UTC] PHP Fatal error:  Uncaught RuntimeException: A facade root has not been set. in /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php:360
+Stack trace:
+#0 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/RegisterErrorViewPaths.php(17): Illuminate\Support\Facades\Facade::__callStatic()
+#1 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(948): Illuminate\Foundation\Exceptions\RegisterErrorViewPaths->__invoke()
+#2 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(923): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#3 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(848): Illuminate\Foundation\Exceptions\Handler->renderHttpException()
+#4 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(739): Illuminate\Foundation\Exceptions\Handler->prepareResponse()
+#5 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(627): Illuminate\Foundation\Exceptions\Handler->renderExceptionResponse()
+#6 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(574): Illuminate\Foundation\Exceptions\Handler->render()
+#7 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(148): Illuminate\Foundation\Http\Kernel->renderException()
+#8 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1220): Illuminate\Foundation\Http\Kernel->handle()
+#9 /home/markcawm/public_html/whitepeony/public/index.php(20): Illuminate\Foundation\Application->handleRequest()
+#10 /home/markcawm/public_html/whitepeony/index.php(21): require_once('/home/markcawm/...')
+#11 {main}
+  thrown in /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php on line 360
+[29-Oct-2025 13:10:45 UTC] PHP Fatal error:  Uncaught RuntimeException: A facade root has not been set. in /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php:360
+Stack trace:
+#0 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/RegisterErrorViewPaths.php(17): Illuminate\Support\Facades\Facade::__callStatic()
+#1 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(948): Illuminate\Foundation\Exceptions\RegisterErrorViewPaths->__invoke()
+#2 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(923): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#3 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(848): Illuminate\Foundation\Exceptions\Handler->renderHttpException()
+#4 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(739): Illuminate\Foundation\Exceptions\Handler->prepareResponse()
+#5 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(627): Illuminate\Foundation\Exceptions\Handler->renderExceptionResponse()
+#6 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(574): Illuminate\Foundation\Exceptions\Handler->render()
+#7 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(148): Illuminate\Foundation\Http\Kernel->renderException()
+#8 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1220): Illuminate\Foundation\Http\Kernel->handle()
+#9 /home/markcawm/public_html/whitepeony/public/index.php(20): Illuminate\Foundation\Application->handleRequest()
+#10 /home/markcawm/public_html/whitepeony/index.php(21): require_once('/home/markcawm/...')
+#11 {main}
+  thrown in /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php on line 360
+[29-Oct-2025 13:11:37 UTC] PHP Fatal error:  Uncaught RuntimeException: A facade root has not been set. in /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php:360
+Stack trace:
+#0 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/RegisterErrorViewPaths.php(17): Illuminate\Support\Facades\Facade::__callStatic()
+#1 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(948): Illuminate\Foundation\Exceptions\RegisterErrorViewPaths->__invoke()
+#2 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(923): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#3 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(848): Illuminate\Foundation\Exceptions\Handler->renderHttpException()
+#4 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(739): Illuminate\Foundation\Exceptions\Handler->prepareResponse()
+#5 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(627): Illuminate\Foundation\Exceptions\Handler->renderExceptionResponse()
+#6 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(574): Illuminate\Foundation\Exceptions\Handler->render()
+#7 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(148): Illuminate\Foundation\Http\Kernel->renderException()
+#8 /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1220): Illuminate\Foundation\Http\Kernel->handle()
+#9 /home/markcawm/public_html/whitepeony/public/index.php(20): Illuminate\Foundation\Application->handleRequest()
+#10 /home/markcawm/public_html/whitepeony/index.php(21): require_once('/home/markcawm/...')
+#11 {main}
+  thrown in /home/markcawm/public_html/whitepeony/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php on line 360
+[13-Mar-2026 13:36:27 UTC] PHP Fatal error:  Cannot use Illuminate\Support\Facades\Log as Log because the name is already in use in /home/markcawm/public_html/whitepeony/app/Http/Controllers/API/OrderController.php on line 25
+[21-Apr-2026 12:04:05 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\API\OrderController::convertToCzk() in /home/markcawm/public_html/whitepeony/app/Http/Controllers/API/OrderController.php on line 516
+[21-Apr-2026 12:04:40 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\API\OrderController::convertToCzk() in /home/markcawm/public_html/whitepeony/app/Http/Controllers/API/OrderController.php on line 516

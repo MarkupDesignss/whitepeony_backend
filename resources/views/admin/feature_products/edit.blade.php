@@ -1,0 +1,68 @@
+@extends('admin.layouts.app')
+@section('title','Edit Feature Product')
+@section('content')
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3 class="mb-0 fw-bold">Edit Feature Product</h3>
+        <a href="{{ route('admin.feature_products.index') }}" class="btn btn-outline-primary">
+            <i class="bi bi-arrow-left me-1"></i>Back to List
+        </a>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <form action="{{ route('admin.feature_products.update',$feature->id) }}" method="POST">
+                @csrf
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label>Product Type</label>
+                        <select id="product_type" name="product_type" class="form-control">
+                            <option value="">Select</option>
+                            <option value="b2b" {{ $feature->product->product_type=='b2b'?'selected':'' }}>B2B</option>
+                            <option value="b2c" {{ $feature->product->product_type=='b2c'?'selected':'' }}>B2C</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label>Product</label>
+                        <select name="product_id" id="product_id" class="form-control"></select>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label>Status</label>
+                        <select name="status" class="form-control">
+                            <option value="active" {{ $feature->status=='active'?'selected':'' }}>Active</option>
+                            <option value="inactive" {{ $feature->status=='inactive'?'selected':'' }}>Inactive</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="text-end">
+                    <button class="btn btn-success">Update</button>
+                    <a href="{{ route('admin.feature_products.index') }}" class="btn btn-danger ms-2">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    load("{{ $feature->product->product_type }}", "{{ $feature->product_id }}");
+    document.getElementById('product_type').addEventListener('change', e => {
+        load(e.target.value, null);
+    });
+});
+
+function load(type, selected) {
+    fetch(`/admin/get-feature-products/${type}`)
+        .then(res => res.json())
+        .then(data => {
+            let opt = '<option value="">Select Product</option>';
+            data.forEach(p => opt += `<option value="${p.id}" ${selected==p.id?'selected':''}>${p.name}</option>`);
+            document.getElementById('product_id').innerHTML = opt;
+        });
+}
+</script>
+@endsection
